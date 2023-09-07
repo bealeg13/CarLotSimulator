@@ -24,25 +24,27 @@ namespace CarLotSimulator
             car1.Make = "Toyota";
             car1.Model = "Camry";           
             car1.IsDriveable = true;
-
             car1.MakeEngineNoise("Vroom");
             car1.MakeHonkNoise("beep");
-            Console.WriteLine(car1.EngineNoise);
-            Console.WriteLine(car1.HonkNoise);
+            //Console.WriteLine(car1.EngineNoise);
+            //Console.WriteLine(car1.HonkNoise);
             myCarLot.ListOfCars.Add(car1);
+            CarLot.IncrementCarValue();
             
             Car car2 = new Car() { Year = 2008, Make = "Honda", Model = "Civic", IsDriveable = true };
             
             car2.MakeEngineNoise("grrrrr");
             car2.MakeHonkNoise("booooop");
             myCarLot.ListOfCars.Add(car2);
+            CarLot.IncrementCarValue();
 
             Car car3 = new Car(2015, "Ford", "Mustang", true);
             
             car3.MakeEngineNoise("Pooow");
             car3.MakeHonkNoise("cliiiick");
             myCarLot.ListOfCars.Add(car3);
-
+            CarLot.IncrementCarValue();
+            
             foreach (var car in myCarLot.ListOfCars)
             {
                 Console.WriteLine(car.Year);
@@ -52,6 +54,8 @@ namespace CarLotSimulator
                 Console.WriteLine();
 
             }
+           
+            Console.WriteLine($"There are {CarLot.GetNumberOfCars()} cars in the carlot.");
 
             //*************BONUS*************//
 
