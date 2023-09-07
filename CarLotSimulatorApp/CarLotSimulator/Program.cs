@@ -20,9 +20,9 @@ namespace CarLotSimulator
             CarLot myCarLot = new CarLot();
             
             Car car1 = new Car();
-            car1.year = 1995;
-            car1.make = "Toyota";
-            car1.model = "Camry";           
+            car1.Year = 1995;
+            car1.Make = "Toyota";
+            car1.Model = "Camry";           
             car1.IsDriveable = true;
 
             car1.MakeEngineNoise("Vroom");
@@ -31,7 +31,7 @@ namespace CarLotSimulator
             Console.WriteLine(car1.HonkNoise);
             myCarLot.ListOfCars.Add(car1);
             
-            Car car2 = new Car() { year = 2008, make = "Honda", model = "Civic", IsDriveable = true };
+            Car car2 = new Car() { Year = 2008, Make = "Honda", Model = "Civic", IsDriveable = true };
             
             car2.MakeEngineNoise("grrrrr");
             car2.MakeHonkNoise("booooop");
@@ -45,9 +45,9 @@ namespace CarLotSimulator
 
             foreach (var car in myCarLot.ListOfCars)
             {
-                Console.WriteLine(car.year);
-                Console.WriteLine(car.make);
-                Console.WriteLine(car.model);
+                Console.WriteLine(car.Year);
+                Console.WriteLine(car.Make);
+                Console.WriteLine(car.Model);
                 Console.WriteLine();
                 Console.WriteLine();
 

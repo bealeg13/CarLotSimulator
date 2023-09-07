@@ -8,12 +8,12 @@ namespace CarLotSimulator
 {
      class Car
     {
-        public int year;
-        public string make;
-        public string model;
-        public string EngineNoise;
-        public string HonkNoise;
-        public bool IsDriveable;
+        public int Year { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public string EngineNoise { get; set; }
+        public string HonkNoise { get; set; }
+        public bool IsDriveable { get; set; }
 
         public string MakeEngineNoise(string noise)
         {
@@ -28,9 +28,9 @@ namespace CarLotSimulator
         }
         public Car(int year, string make, string model,bool isDriveable)
         {
-            this.year = year;
-            this.make = make;
-            this.model = model;        
+            this.Year = year;
+            this.Make = make;
+            this.Model = model;        
             IsDriveable = isDriveable;
         }
         public Car()
